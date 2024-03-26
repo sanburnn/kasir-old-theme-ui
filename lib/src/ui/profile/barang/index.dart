@@ -295,8 +295,8 @@ class _ListBarangState extends State<ListBarang> {
                 item.name,
                 item.description,
                 item.unit,
-                item.takePrice,
-                item.price,
+                item.takePrice.toString(),
+                item.price.toString(),
               ],
             ),
             child: Container(

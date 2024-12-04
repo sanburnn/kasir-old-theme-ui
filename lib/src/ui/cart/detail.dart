@@ -44,19 +44,19 @@ class _CartDetailUIState extends State<CartDetailUI> {
               Container(
                 width: width(context),
                 height: height(context) * 0.04,
-                margin: EdgeInsets.symmetric(horizontal: 20),
+                margin: const EdgeInsets.symmetric(horizontal: 20),
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     InkWell(
                       onTap: () => Navigator.pop(context),
-                      child: Icon(
+                      child: const Icon(
                         Icons.arrow_back_ios,
                         size: 20,
                       ),
                     ),
                     SizedBox(width: width(context) * 0.02),
-                    Text(
+                    const Text(
                       'Detail Keranjang',
                       style: TextStyle(
                         fontSize: 20,
@@ -64,16 +64,16 @@ class _CartDetailUIState extends State<CartDetailUI> {
                         fontWeight: FontWeight.w600,
                       ),
                     ),
-                    Spacer(),
+                    const Spacer(),
                     InkWell(
                       onTap: () => _openModal(context),
                       child: Container(
-                        padding: EdgeInsets.all(5),
+                        padding: const EdgeInsets.all(5),
                         decoration: BoxDecoration(
                           color: primaryColor,
                           borderRadius: BorderRadius.circular(5),
                         ),
-                        child: Icon(
+                        child: const Icon(
                           Icons.person,
                           color: Colors.white,
                         ),
@@ -92,7 +92,7 @@ class _CartDetailUIState extends State<CartDetailUI> {
                       _formName.text != '' ? '-' : _formName.text,
                     ),
                     SizedBox(height: height(context) * 0.01),
-                    Divider(
+                    const Divider(
                       color: Colors.black26,
                       thickness: 1,
                       indent: 20,
@@ -122,7 +122,7 @@ class _CartDetailUIState extends State<CartDetailUI> {
                       ),
                     ),
                     SizedBox(height: height(context) * 0.01),
-                    Divider(
+                    const Divider(
                       color: Colors.black26,
                       thickness: 1,
                       indent: 20,
@@ -157,7 +157,7 @@ class _CartDetailUIState extends State<CartDetailUI> {
               Container(
                 width: width(context),
                 height: height(context) * 0.04,
-                padding: EdgeInsets.symmetric(horizontal: 20),
+                padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     backgroundColor: conCart.status.value == 'edit'
@@ -208,7 +208,7 @@ class _CartDetailUIState extends State<CartDetailUI> {
                         getToast('Berhasil menambahkan transaksi');
                       }
 
-                      Future.delayed(Duration(seconds: 2), () {
+                      Future.delayed(const Duration(seconds: 2), () {
                         Navigator.pop(context);
                         Navigator.pop(context);
                       });
@@ -216,7 +216,7 @@ class _CartDetailUIState extends State<CartDetailUI> {
                       getToast('Gagal menambahkan transaksi');
                     }
                   },
-                  child: Text("Proses", style: TextStyle(fontSize: 18)),
+                  child: const Text("Proses", style: TextStyle(fontSize: 18)),
                 ),
               ),
               SizedBox(height: height(context) * 0.02),
@@ -237,7 +237,7 @@ class _CartDetailUIState extends State<CartDetailUI> {
   }) {
     return Container(
       width: width(context),
-      margin: EdgeInsets.symmetric(horizontal: 20),
+      margin: const EdgeInsets.symmetric(horizontal: 20),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -262,8 +262,8 @@ class _CartDetailUIState extends State<CartDetailUI> {
                   ),
                 ),
                 TextSpan(
-                  text: ' - ' + desc,
-                  style: TextStyle(
+                  text: ' - $desc',
+                  style: const TextStyle(
                     fontSize: 16,
                     color: Colors.black87,
                     fontWeight: FontWeight.w400,
@@ -313,7 +313,7 @@ class _CartDetailUIState extends State<CartDetailUI> {
               height: height(context) * 0.04,
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  primary: primaryColor,
+                  backgroundColor: primaryColor,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
@@ -322,7 +322,7 @@ class _CartDetailUIState extends State<CartDetailUI> {
                   setState(() {});
                   Navigator.pop(context);
                 },
-                child: Text("OK", style: TextStyle(fontSize: 18)),
+                child: const Text("OK", style: TextStyle(fontSize: 18)),
               ),
             ),
           ],

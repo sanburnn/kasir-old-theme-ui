@@ -16,12 +16,12 @@ ThemeData theme() {
 InputDecorationTheme inputDecorationTheme() {
   OutlineInputBorder outlineInputBorder = OutlineInputBorder(
     borderRadius: BorderRadius.circular(40),
-    borderSide: BorderSide(color: Colors.transparent),
+    borderSide: const BorderSide(color: Colors.transparent),
     gapPadding: 10,
   );
   return InputDecorationTheme(
     floatingLabelBehavior: FloatingLabelBehavior.always,
-    contentPadding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+    contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
     enabledBorder: outlineInputBorder,
     focusedBorder: outlineInputBorder,
     border: outlineInputBorder,
@@ -34,14 +34,14 @@ InputDecorationTheme inputDecorationTheme() {
 }
 
 TextTheme textTheme() {
-  return TextTheme(
-    bodyText1: TextStyle(color: textColor),
-    bodyText2: TextStyle(color: textColor),
+  return const TextTheme(
+    bodyLarge: TextStyle(color: textColor),
+    bodyMedium: TextStyle(color: textColor),
   );
 }
 
 AppBarTheme appBarTheme() {
-  return AppBarTheme(
+  return const AppBarTheme(
     backgroundColor: darkBlueColor,
     elevation: 6,
     iconTheme: IconThemeData(color: textColor),

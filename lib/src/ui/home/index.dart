@@ -137,7 +137,7 @@ class _HomeUIState extends State<HomeUI> {
                 : Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
+                      const Text(
                         'Daftar Produk',
                         style: TextStyle(
                           fontSize: 20,
@@ -153,12 +153,12 @@ class _HomeUIState extends State<HomeUI> {
                                 _isSearch = !_isSearch;
                               });
                             },
-                            child: Icon(
+                            child: const Icon(
                               Icons.search,
                               color: Colors.black87,
                             ),
                           ),
-                          SizedBox(width: 10),
+                          const SizedBox(width: 10),
                           InkWell(
                             onTap: _isQR
                                 ? () {
@@ -348,12 +348,12 @@ class _HomeUIState extends State<HomeUI> {
 
     return Container(
       width: double.infinity,
-      margin: EdgeInsets.symmetric(horizontal: 6, vertical: 6),
-      padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+      margin: const EdgeInsets.symmetric(horizontal: 6, vertical: 6),
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(10),
-        boxShadow: [
+        boxShadow: const [
           BoxShadow(
             color: Colors.black12,
             offset: Offset(0, 3),
@@ -369,40 +369,40 @@ class _HomeUIState extends State<HomeUI> {
               children: [
                 Text(
                   item.name ?? '-',
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 16,
                     color: Colors.black45,
                     fontWeight: FontWeight.w600,
                     height: 1,
                   ),
                 ),
-                if (item.description != null) SizedBox(height: 4),
+                if (item.description != null) const SizedBox(height: 4),
                 if (item.description != null)
                   Text(
                     item.description ?? '-',
                     overflow: TextOverflow.clip,
                     maxLines: 2,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 12,
                       color: Colors.black45,
                       fontWeight: FontWeight.w400,
                       height: 1,
                     ),
                   ),
-                SizedBox(height: 4),
+                const SizedBox(height: 4),
                 Text(
                   item.unit ?? '-',
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 10,
                     color: Colors.black45,
                     fontWeight: FontWeight.w400,
                     height: 1.2,
                   ),
                 ),
-                SizedBox(height: 6),
+                const SizedBox(height: 6),
                 Text(
                   toRupiah(double.parse((item.price).toString() ?? "0")),
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 12,
                     color: Colors.black45,
                     fontWeight: FontWeight.w600,
@@ -412,7 +412,7 @@ class _HomeUIState extends State<HomeUI> {
               ],
             ),
           ),
-          SizedBox(width: 10),
+          const SizedBox(width: 10),
           cart.id == 0
               ? Container(
                   width: 40,
@@ -424,7 +424,7 @@ class _HomeUIState extends State<HomeUI> {
                   ),
                   child: IconButton(
                     padding: EdgeInsets.zero,
-                    icon: Icon(
+                    icon: const Icon(
                       Icons.add,
                       size: 30,
                       color: Colors.black45,
@@ -442,8 +442,8 @@ class _HomeUIState extends State<HomeUI> {
                     },
                   ),
                 )
-              : Spacer(),
-          SizedBox(width: 10),
+              : const Spacer(),
+          const SizedBox(width: 10),
         ],
       ),
     );
@@ -455,38 +455,38 @@ class _HomeUIState extends State<HomeUI> {
       subTitle: '',
       subTitleWidget: Container(
         width: width(context) * 0.8,
-        padding: EdgeInsets.symmetric(horizontal: 20),
+        padding: const EdgeInsets.symmetric(horizontal: 20),
         child: Column(
           children: [
             SizedBox(height: height(context) * 0.01),
             CustomTextField(
               controller: _formName,
               hintText: "Nama Barang",
-              prefixIcon: Icon(Icons.add_box),
+              prefixIcon: const Icon(Icons.add_box),
               readOnly: true,
             ),
             SizedBox(height: height(context) * 0.01),
             CustomTextField(
               controller: _formPrice,
               hintText: "Uang Harga",
-              prefixIcon: Icon(Icons.money),
+              prefixIcon: const Icon(Icons.money),
               keyboardType: TextInputType.number,
             ),
             SizedBox(height: height(context) * 0.01),
             CustomTextField(
               controller: _formQty,
               hintText: "Banyak",
-              prefixIcon: Icon(Icons.numbers),
+              prefixIcon: const Icon(Icons.numbers),
               keyboardType: TextInputType.number,
             ),
             SizedBox(height: height(context) * 0.02),
             // button ok
-            Container(
+            SizedBox(
               width: width(context),
               height: height(context) * 0.04,
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  primary: primaryColor,
+                  backgroundColor: primaryColor,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
@@ -509,7 +509,7 @@ class _HomeUIState extends State<HomeUI> {
                   });
                   Navigator.pop(context);
                 },
-                child: Text("OK", style: TextStyle(fontSize: 18)),
+                child: const Text("OK", style: TextStyle(fontSize: 18)),
               ),
             ),
           ],

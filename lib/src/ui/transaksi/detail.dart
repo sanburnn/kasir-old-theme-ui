@@ -78,7 +78,7 @@ class _TransaksiDetailUIState extends State<TransaksiDetailUI> {
               height: height(context) * 0.04,
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  primary: primaryColor,
+                  backgroundColor: primaryColor,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),

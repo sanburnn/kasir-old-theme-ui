@@ -6,13 +6,13 @@ class ShareStruk {
   static Widget struk(TransaksiModel transaksi) {
     return Container(
       width: double.infinity,
-      padding: EdgeInsets.symmetric(horizontal: 20),
+      padding: const EdgeInsets.symmetric(horizontal: 20),
       child: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(height: 20),
-            Text(
+            const SizedBox(height: 20),
+            const Text(
               'Toko Palapa',
               style: TextStyle(
                 fontSize: 20,
@@ -20,7 +20,7 @@ class ShareStruk {
                 fontWeight: FontWeight.w400,
               ),
             ),
-            Text(
+            const Text(
               'Pertokoan Pasar Atas',
               style: TextStyle(
                 fontSize: 20,
@@ -29,7 +29,7 @@ class ShareStruk {
                 height: 1,
               ),
             ),
-            Text(
+            const Text(
               '085123123123',
               style: TextStyle(
                 fontSize: 18,
@@ -38,8 +38,8 @@ class ShareStruk {
                 height: 1,
               ),
             ),
-            SizedBox(height: 10),
-            Text(
+            const SizedBox(height: 10),
+            const Text(
               'Tgl Trx: 12-12-2020 12:12:12',
               style: TextStyle(
                 fontSize: 18,
@@ -48,7 +48,7 @@ class ShareStruk {
                 height: 1.2,
               ),
             ),
-            Text(
+            const Text(
               'Jml Jns Brg: 12',
               style: TextStyle(
                 fontSize: 18,
@@ -57,7 +57,7 @@ class ShareStruk {
                 height: 1.2,
               ),
             ),
-            Text(
+            const Text(
               'Pembeli : Doni',
               style: TextStyle(
                 fontSize: 18,
@@ -66,7 +66,7 @@ class ShareStruk {
                 height: 1.2,
               ),
             ),
-            Text(
+            const Text(
               '===========================',
               style: TextStyle(
                 fontSize: 18,
@@ -94,7 +94,7 @@ class ShareStruk {
                   children: [
                     Text(
                       e.item!.name ?? '',
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 18,
                         color: Colors.black87,
                         fontWeight: FontWeight.w400,
@@ -106,7 +106,7 @@ class ShareStruk {
                       children: [
                         Text(
                           desc,
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontSize: 18,
                             color: Colors.black87,
                             fontWeight: FontWeight.w400,
@@ -115,7 +115,7 @@ class ShareStruk {
                         ),
                         Text(
                           price,
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontSize: 18,
                             color: Colors.black87,
                             fontWeight: FontWeight.w400,
@@ -127,7 +127,7 @@ class ShareStruk {
                   ],
                 );
               }),
-            Text(
+            const Text(
               '===========================',
               style: TextStyle(
                 fontSize: 18,
@@ -139,7 +139,7 @@ class ShareStruk {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
+                const Text(
                   'Total',
                   style: TextStyle(
                     fontSize: 18,
@@ -151,7 +151,7 @@ class ShareStruk {
                 Text(
                   toRupiah(
                       double.parse(transaksi.totalPrice.toString() ?? '0')),
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 18,
                     color: Colors.black87,
                     fontWeight: FontWeight.w400,
@@ -163,7 +163,7 @@ class ShareStruk {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
+                const Text(
                   'Bayar',
                   style: TextStyle(
                     fontSize: 18,
@@ -175,7 +175,7 @@ class ShareStruk {
                 Text(
                   toRupiah(
                       double.parse(transaksi.amountPaid.toString() ?? '0')),
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 18,
                     color: Colors.black87,
                     fontWeight: FontWeight.w400,
@@ -209,8 +209,8 @@ class ShareStruk {
                 ),
               ],
             ),
-            SizedBox(height: 10),
-            Text(
+            const SizedBox(height: 10),
+            const Text(
               'Bukan jam setengah 7 pagi - 7 malam',
               style: TextStyle(
                 fontSize: 18,
@@ -219,7 +219,7 @@ class ShareStruk {
                 height: 1.2,
               ),
             ),
-            Text(
+            const Text(
               'Terima Kasih',
               style: TextStyle(
                 fontSize: 18,
@@ -230,14 +230,14 @@ class ShareStruk {
             ),
             Text(
               dateFormatEEEEdMMMMyyyyhhmm(DateTime.now()),
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 18,
                 color: Colors.black87,
                 fontWeight: FontWeight.w400,
                 height: 1.2,
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
           ],
         ),
       ),
